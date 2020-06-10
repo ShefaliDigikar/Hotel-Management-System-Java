@@ -6,6 +6,9 @@
   A customer can select either of the services provided by the hotel i.e., Accommodation or Food. Based on the customer’s choice he/she will be redirected to the next page where he/she can select desired food items or book rooms. 
 Admin can add/delete dishes or rooms to the database.
 </br></br>
+### Class Diagram
+![JAVA_OEEE](https://user-images.githubusercontent.com/45465068/84239177-bbb5b000-ab19-11ea-9d9b-558c8ec7194f.png)
+</br>
 ### Steps to run the application
   1. Open your xampp server and create a database by name ‘hotelmanagement’
   2. Create required tables and populate the database using database.txt
