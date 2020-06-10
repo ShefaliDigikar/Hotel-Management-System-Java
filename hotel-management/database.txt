@@ -1,0 +1,84 @@
+﻿CREATE TABLE `login` (
+  `username` varchar(20) NOT NULL,
+  `password` varchar(20) NOT NULL
+);
+INSERT INTO `login` (`username`, `password`) VALUES ('renaissance', 'renaissance');
+
+
+CREATE TABLE `customer` (
+  `Name` varchar(40) NOT NULL,
+  `Address` varchar(40) NOT NULL,
+  `Phone` bigint(10) NOT NULL,
+  `Type` varchar(10) NOT NULL
+);
+
+
+CREATE TABLE `restaurant` (
+  `itemNo` int(3) NOT NULL,
+  `itemName` varchar(20) NOT NULL,
+  `Price` int(4) NOT NULL,
+  `Type` varchar(10) NOT NULL
+); 
+INSERT INTO `restaurant` (`itemNo`, `itemName`, `Price`, `Type`) VALUES
+(1, 'SHAHI PANEER', 500, 'MEAL'),
+(2, 'CHOCOLATE FONDUE', 200, 'MEAL'),
+(3, 'MANCHOW SOUP', 400, 'MEAL'),
+(4, 'PANEER MANCHURIAN', 350, 'MEAL'),
+(5, 'PIRI-PIRI CHICKEN', 600, 'MEAL'),
+(6, 'PINA-COLADA', 250, 'DRINK'),
+(7, 'ARIZONA TEA', 150, 'DRINK'),
+(8, 'CAPPUCCINO', 180, 'DRINK'),
+(9, 'ESPRESSO', 250, 'DRINK'),
+(10, 'MELON JUICE', 100, 'DRINK');
+
+
+CREATE TABLE `restaurantcustomer` (
+  `custName` varchar(20) NOT NULL,
+  `custAddr` varchar(20) NOT NULL,
+  `Phone` bigint(10) NOT NULL,
+  `Meal` varchar(20) NOT NULL,
+  `Drink` varchar(20) NOT NULL,
+  `Price` int(7) NOT NULL,
+  `status` int(2) NOT NULL
+);
+
+
+CREATE TABLE `room` (
+  `roomNo` int(3) NOT NULL,
+  `roomType` varchar(20) NOT NULL,
+  `bedType` varchar(20) NOT NULL,
+  `Price` int(5) NOT NULL
+); 
+INSERT INTO `room` (`roomNo`, `roomType`, `bedType`, `Price`) VALUES
+(1,'SUITE','QUEEN',9500),
+(2,'DELUXE','KING',7500),
+(3,'AC','KING',8000),
+(4,'NON-AC','DOUBLE',3500),
+(5,'SUITE','SINGLE',5500),
+(6,'DELUXE','DOUBLE',7000),
+(7,'AC','QUEEN',6500),
+(8,'NON-AC','SINGLE',5500);
+
+
+CREATE TABLE `roomcutomer` (
+  `name` varchar(20) NOT NULL,
+  `address` varchar(20) NOT NULL,
+  `phone` bigint(10) NOT NULL,
+  `roomtype` varchar(10) NOT NULL,
+  `bedtype` varchar(20) NOT NULL,
+  `price` int(7) NOT NULL,
+  `status` int(11) NOT NULL,
+  `roomno` int(11) NOT NULL
+); 
+
+
+ALTER TABLE `restaurant`
+  ADD PRIMARY KEY (`itemNo`);
+
+
+ALTER TABLE `room`
+  ADD PRIMARY KEY (`roomNo`);
+
+
+ALTER TABLE `roomcutomer`
+  ADD PRIMARY KEY (`roomno`);
