@@ -1,4 +1,4 @@
-﻿CREATE TABLE `login` (
+CREATE TABLE `login` (
   `username` varchar(20) NOT NULL,
   `password` varchar(20) NOT NULL
 );
@@ -14,10 +14,11 @@ CREATE TABLE `customer` (
 
 
 CREATE TABLE `restaurant` (
-  `itemNo` int(3) NOT NULL,
+  `itemNo` int(3) NOT NULL AUTO_INCREMENT,
   `itemName` varchar(20) NOT NULL,
   `Price` int(4) NOT NULL,
-  `Type` varchar(10) NOT NULL
+  `Type` varchar(10) NOT NULL,
+   PRIMARY KEY (`itemNo`)
 ); 
 INSERT INTO `restaurant` (`itemNo`, `itemName`, `Price`, `Type`) VALUES
 (1, 'SHAHI PANEER', 500, 'MEAL'),
@@ -44,10 +45,11 @@ CREATE TABLE `restaurantcustomer` (
 
 
 CREATE TABLE `room` (
-  `roomNo` int(3) NOT NULL,
+  `roomNo` int(3) NOT NULL AUTO_INCREMENT,
   `roomType` varchar(20) NOT NULL,
   `bedType` varchar(20) NOT NULL,
-  `Price` int(5) NOT NULL
+  `Price` int(5) NOT NULL,
+   PRIMARY KEY (`roomNo`)
 ); 
 INSERT INTO `room` (`roomNo`, `roomType`, `bedType`, `Price`) VALUES
 (1,'SUITE','QUEEN',9500),
@@ -68,19 +70,7 @@ CREATE TABLE `roomcutomer` (
   `bedtype` varchar(20) NOT NULL,
   `price` int(7) NOT NULL,
   `status` int(11) NOT NULL,
-  `roomno` int(11) NOT NULL
+  `roomno` int(11) NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`roomno`)
+  
 ); 
-
-
-ALTER TABLE `restaurant`
-  ADD PRIMARY KEY (`itemNo`);
-  CHANGE `itemNo` `itemNo` INT(3)AUTO_INCREMENT;
-
-ALTER TABLE `room`
-  ADD PRIMARY KEY (`roomNo`);
-  CHANGE `roomNo` `roomNo` INT(3)AUTO_INCREMENT;
-
-
-ALTER TABLE `roomcutomer`
-  ADD PRIMARY KEY (`roomno`);
-  CHANGE `roomno` `roomno` INT(11)AUTO_INCREMENT;
