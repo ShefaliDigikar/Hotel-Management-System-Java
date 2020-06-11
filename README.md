@@ -13,6 +13,5 @@ Admin can add/delete dishes or rooms to the database.
   1. Open your xampp server and create a database by name ‘renaissance’
   2. Create required tables and populate the database using database.txt
   3. Import the project in Eclipse IDE
-  4. Right-click on the Project → Build Path → Configure Build Path. Under Libraries tab, click Add External JARs and import all the JARS present in External_JARS folder.
-  5. Run the project. 
+  4. Run the project. 
 
