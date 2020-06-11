@@ -82,3 +82,4 @@ ALTER TABLE `room`
 
 ALTER TABLE `roomcutomer`
   ADD PRIMARY KEY (`roomno`);
+  CHANGE `roomno` `roomno` INT(11)AUTO_INCREMENT;
