@@ -74,10 +74,11 @@ CREATE TABLE `roomcutomer` (
 
 ALTER TABLE `restaurant`
   ADD PRIMARY KEY (`itemNo`);
-
+  CHANGE `itemNo` `itemNo` INT(3)AUTO_INCREMENT;
 
 ALTER TABLE `room`
   ADD PRIMARY KEY (`roomNo`);
+  CHANGE `roomNo` `roomNo` INT(3)AUTO_INCREMENT;
 
 
 ALTER TABLE `roomcutomer`
